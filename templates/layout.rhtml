@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<meta name="description" content="<%= @context[:description] || @config[:def_des] %>" />
+    <title>
+	<% if @path == 'index' %>
+	    <%= @config[:author] %>
+	<% elsif @path.split('/').compact.length == 4 %>
+	    <%= title %> - <%= @config[:author] %>
+	<% else %>
+	    <%= @path.capitalize.gsub(/[-]/, ' ') %> - <%= @config[:author] %>
+	<% end %>
+	</title>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="menu">
+        <ul>
+          <li <%= ' class="active"' if @path == '/' %>><a href="/">Home</a></li>
+          <li <%= ' class="active"' if @path == 'archives' %>><a href="/archives">Archive</a></li>
+          <li <%= ' class="active"' if @path == 'about' %>><a href="/about">About</a></li>
+          <li><a href="https://twitter.com/#!/<%= @config[:twitter] %>">Twitter</a></li>
+          <li><a href="/index.xml">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+    <br/>
+    <section>
+      <%= yield %> 
+    </section>
+    <footer>
+      &copy; <%= @config[:author] %> powered by <a href="http://cloudhead.io/toto">toto</a> &amp; <a href ="https://github.com/prestia/dodo">dodo</a>
+    </footer>
+  </body>
+</html>
+
