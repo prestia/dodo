@@ -1,6 +1,13 @@
-dodo for toto
-=======
+# dodo for toto #
 
 A personal blog template for the blogging engine [toto](http://cloudhead.io/toto) based on [Dorothy](https://github.com/cloudhead/dorothy).
 
 More information to come.
+
+## Installation ##
+
+git clone git://github.com/prestia/dodo.git myblog
+cd myblog
+heroku create myblog
+git push heroku master
+heroku open
