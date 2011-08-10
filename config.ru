@@ -20,20 +20,20 @@ toto = Toto::Server.new do
   # set [:setting], [value]
   # 
 
-  # set :blog_title,''                                        # main blog title
-  # set :author,    ''                                        # blog author
-  # set :root,      "index"                                   # page to load on /
-  # set :markdown,  :smart                                    # use markdown + smart-mode
-  # set :disqus,    ''                                        # disqus id, or false
-  # set :summary,   :max => 150, :delim => /~/                # length of article summary and delimiter
-  # set :ext,       'txt'                                     # file extension for articles
-  # set :cache,     28800                                     # cache duration, in seconds
+  # set :blog_title,   ''                                        # main blog title
+  # set :author,       ''                                        # blog author
+  # set :root,         "index"                                   # page to load on /
+  # set :markdown,     :smart                                    # use markdown + smart-mode
+  # set :disqus,       ''                                        # disqus id, or false
+  # set :summary,      :max => 150, :delim => /~/                # length of article summary and delimiter, or false
+  # set :ext,          'txt'                                     # file extension for articles
+  # set :cache,        28800                                     # cache duration, in seconds
 
-  # set :twitter,	''                                        # twitter username
-  # set :def_des,   ''                                        # default blog description
-  # set :main_url,  ''                                        # main, non-blog url
+  # set :twitter,      ''                                        # twitter username
+  # set :description,  ''                                        # default blog description
+  # set :main_url,     ''                                        # main, non-blog url
 
-  # set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") } # date format for articles
+  # set :date,         lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") } # date format for articles
 
 end
 
