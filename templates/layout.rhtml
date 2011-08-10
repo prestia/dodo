@@ -23,9 +23,7 @@
 
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="/css/style.css">
-  <!-- end CSS-->
 
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
 
@@ -82,17 +80,20 @@
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
-  <!-- scripts concatenated and minified via ant build script-->
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
-  <!-- end scripts-->
+  <script defer src="/js/plugins.js"></script>
+  <script defer src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/highlight.pack.js"></script>
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
 
 
-  <script> // Change UA-XXXXX-X to be your site's ID
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+  <script>
+    window._gaq = [['_setAccount','<%= @config[:analytics] %>'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
