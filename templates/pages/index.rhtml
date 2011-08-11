@@ -7,11 +7,11 @@
       </header>
 
       <section class="content">
-        <% if @config[:summary] %><%= article.summary %>
+        <% if @config[:fulltext] == false %><%= article.summary %>
 	    <% else %><%= article.body %>
 	    <% end %>
       </section>
-      <% if @config[:summary] %><div class="more"><a href="<%= article.path %>">view article &raquo;</a></div><% end %>
+      <% if @config[:fulltext] == false %><div class="more"><a href="<%= article.path %>">view article &raquo;</a></div><% end %>
     </article>
   <% end %>
 </section>
