@@ -29,10 +29,11 @@ toto = Toto::Server.new do
   # set :ext,          'txt'                                     # file extension for articles
   # set :cache,        28800                                     # cache duration, in seconds
 
+  # set :github,       ''                                        # github username
   # set :twitter,      ''                                        # twitter username
   # set :description,  ''                                        # default blog description
   # set :main_url,     ''                                        # main, non-blog url
-  # set :analytics,   ''                                       # your site's Google Analytics ID
+  # set :analytics,    ''                                        # your site's Google Analytics ID
 
   # set :date,         lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") } # date format for articles
 
