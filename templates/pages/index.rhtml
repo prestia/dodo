@@ -11,7 +11,8 @@
 	    <% else %><%= article.body %>
 	    <% end %>
       </section>
-      <% if @config[:fulltext] == false %><div class="more"><a href="<%= article.path %>">view article &raquo;</a></div><% end %>
+      <div class="more"><a href="<%= article.path %>">view <% if @config[:fulltext] == false %>article<% else %>comments<% end %> &raquo;</a></div>
+      <br/>
     </article>
   <% end %>
 </section>
