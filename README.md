@@ -8,10 +8,10 @@ Dodo is based on HTML5 Boilerplate v2, so it should play nicely with all browser
 Installation
 ------------
 
-  $ git clone git://github.com/prestia/dodo.git <blog name>
-  $ cd <blog name>
-  $ heroku create <blog name>
-  $ git push heroku master
+    $ git clone git://github.com/prestia/dodo.git <blog name>
+    $ cd <blog name>
+    $ heroku create <blog name>
+    $ git push heroku master
 
 Example
 -------
